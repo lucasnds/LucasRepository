@@ -3,16 +3,13 @@ package PackageJava;
 import java.util.Scanner;
 
 public class Exercicio {
-
-
 public static void main(String[] args) {
-int a, b, c, n, i;
+int a=1,b=1,c,n,i;
 Scanner scan = new Scanner(System.in);
 System.out.println("informe o valor de n:");
 n = scan.nextInt();
 scan.close();
-a=1;
-b=1;
+
 c=a+b;
 for(i=1; i<=n; i++) {
 System.out.println(a);
