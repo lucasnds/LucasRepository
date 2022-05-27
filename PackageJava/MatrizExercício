@@ -1,0 +1,39 @@
+package Matrizes;
+
+public class MatrizDiagonalMaisEMenos {
+
+		public static void main(String[] args) {
+		int[][] mat = new int[4][4];
+
+		preenchezeroum(mat);
+		mostra(mat);
+
+		}
+
+		public static void mostra(int[][] m){
+		int i, j;
+
+		for(i=0; i<m.length; i++) {
+			for(j=0; j<m[i].length; j++) {
+				System.out.printf("%3d ", m[i][j]);
+		}
+		System.out.println();
+			}
+		}
+
+		public static void preenchezeroum(int[][] m) {
+		int i, j;
+
+		for(j=0; j<m[0].length; j++) {
+			for(i=0; i<m.length; i++) {
+				if(i>j) {
+				m[i][j]=-1;
+				}else {
+				m[i][j]=1;
+				}if(i==j) {
+				m[i][j]=0;
+						}
+					}
+				}
+			}
+		}
