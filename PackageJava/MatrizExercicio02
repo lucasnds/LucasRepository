@@ -1,0 +1,47 @@
+package Matrizes;
+
+import java.util.Random;
+
+public class MatrizDiagonal {
+
+	public static Random random = new Random();
+	
+	public static void main(String[] args) {
+	int [][] m;
+	m = new int [3][3];
+	
+	preenche(m);
+	mostra(m);
+	diagonal(m);
+	}
+	
+	public static int[][] preenche(int[][]m) {
+	int i,j;
+	
+	for(i=0;i<m.length;i++) {
+		for(j=0;j<m[i].length;j++) {
+				m[i][j] = random.nextInt(10);
+			}
+	}
+	return m;
+	}
+	
+	public static void mostra(int[][] m) {
+	int i, j;
+	
+	for(i=0; i<m.length; i++) {
+		for(j=0; j<m[i].length; j++) {
+		    System.out.print(m[i][j] + " ");
+	}
+	System.out.println();
+		}
+	}
+	
+	public static void diagonal (int[][] m ) {
+	int i;
+	
+	for(i=0;i<m.length;i++) {
+	    System.out.println(m[i][i]);
+			}
+		}
+	}
