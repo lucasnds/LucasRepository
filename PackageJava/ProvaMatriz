@@ -1,0 +1,55 @@
+package AtividadesAvaliativas;
+
+import java.util.Random;
+
+public class Prova02Uni02Ques01Matriz {
+
+	public static Random random = new Random();
+
+	public static void main(String[] args) {
+		int[][] m;
+		m = new int[3][3];
+
+		preenche(m);
+		mostra(m);
+		soma(m);
+
+	}
+
+	public static int[][] preenche(int[][] m) {
+		int i, j;
+		for (i = 0; i < m.length; i++) {
+			for (j = 0; j < m[i].length; j++) {
+				m[i][j] = random.nextInt(10);
+			}
+		}
+		return m;
+	}
+
+	public static void mostra(int[][] m) {
+		int i, j;
+		for (i = 0; i < m.length; i++) {
+			for (j = 0; j < m[i].length; j++) {
+				System.out.print(m[i][j] + " ");
+			}
+			System.out.println();
+		}
+		System.out.println();
+	}
+
+	public static void soma(int[][] m) {
+		int i, j, resp = 0, cont = 0;
+		for (j = 0; j < m.length; j++) {
+			resp = 0;
+			for (i = 0; i < m.length; i++) {
+				resp = resp + m[i][j];
+				System.out.print(m[i][j] + " ");
+			}
+			cont++;
+
+			System.out.println();
+			System.out.println("coluna " + cont + "° = " + resp);
+		}
+	}
+
+}
